@@ -6,9 +6,9 @@
 // @author       SLY w/ Contributions by niofox, SkyLove512, anthonyra
 // @match        https://*.based.staratlas.com/
 // @require      https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js
-// @require      https://raw.githubusercontent.com/ImGroovin/SAGE-Lab-Assistant/main/anchor-browserified.js
-// @require      https://raw.githubusercontent.com/ImGroovin/SAGE-Lab-Assistant/main/buffer-browserified.js
-// @require      https://raw.githubusercontent.com/ImGroovin/SAGE-Lab-Assistant/main/bs58-browserified.js
+// @require      https://raw.githubusercontent.com/Torinder/SLY-64/main/anchor-browserified.js
+// @require      https://raw.githubusercontent.com/Torinder/SLY-64/main/buffer-browserified.js
+// @require      https://raw.githubusercontent.com/Torinder/SLY-64/main/bs58-browserified.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=staratlas.com
 // @grant        GM_setValue
 // @grant        GM_getValue
@@ -19,10 +19,10 @@
 	'use strict';
 
 	//Used for reading solana data
-	let customReadRPCs = [];
+	let customReadRPCs = ['https://solana-mainnet.api.syndica.io/api-token/2AmceVWnShd1frYZGyTbpzYHG66KdAgZRMdU3BEKDX9DKxy8QowWoAaUgKyg1mnH7LvbZDg22HCjiEyCiWLiho98rCEC3MQvJ2wjk8sUCprQus9fE7QEfF2idNqHY8UZy8cDp3NJs3pQTrbUDBcM6Y4Q4c2qEEeSPkKNmMVUUgS9b6gCZJxLVfEefik1rp9iKBuwrHsBBVbxhAAHoHzwU9WNQEJA1EPvpG3zCJBwy5F9BpS7g5a4RtcgQf9raDQHxDDaHhU5MqL8Ya235KYDQFKXGwU1k84oYWMRpWRjMLtjMoE1uym1Y4CQcdEAEJqSYvbS6WGru9Cxz8YAwJLHkzdRreFcGMwSMHU8eabm6dKAFpLwGzqgcGctMA4SGo7EBWdR25881Q5Rf1rZdUjUKh7f9RKLQ1BSiePMFzoAvcSYkbtjtTcTkZNwmnadWYkH96BQBuSnmRMB7SNnppp5CkTjgfhWCWS2DUNWVRtxXFZVLXBuNydqH21bnR2ej',];
 
 	//Used for pushing transactions to solana chain
-	let customWriteRPCs = [];
+	let customWriteRPCs = ['https://solana-mainnet.api.syndica.io/api-token/2AmceVWnShd1frYZGyTbpzYHG66KdAgZRMdU3BEKDX9DKxy8QowWoAaUgKyg1mnH7LvbZDg22HCjiEyCiWLiho98rCEC3MQvJ2wjk8sUCprQus9fE7QEfF2idNqHY8UZy8cDp3NJs3pQTrbUDBcM6Y4Q4c2qEEeSPkKNmMVUUgS9b6gCZJxLVfEefik1rp9iKBuwrHsBBVbxhAAHoHzwU9WNQEJA1EPvpG3zCJBwy5F9BpS7g5a4RtcgQf9raDQHxDDaHhU5MqL8Ya235KYDQFKXGwU1k84oYWMRpWRjMLtjMoE1uym1Y4CQcdEAEJqSYvbS6WGru9Cxz8YAwJLHkzdRreFcGMwSMHU8eabm6dKAFpLwGzqgcGctMA4SGo7EBWdR25881Q5Rf1rZdUjUKh7f9RKLQ1BSiePMFzoAvcSYkbtjtTcTkZNwmnadWYkH96BQBuSnmRMB7SNnppp5CkTjgfhWCWS2DUNWVRtxXFZVLXBuNydqH21bnR2ej',];
 
     let saRPCs = [
         'https://twilight-autumn-diagram.solana-mainnet.quiknode.pro/4fc53d638efd1cc0f80764bc457944bb325d1ff1', //Quicknode
